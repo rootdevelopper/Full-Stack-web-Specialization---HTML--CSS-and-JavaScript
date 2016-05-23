@@ -1,0 +1,53 @@
+
+<!-- saved from url=(0120)https://s3.amazonaws.com/coursera-uploads/peer-review/LgWwihnoEeWDtQoum3sFeQ/1dbeb673f1dec87793bb37bf72a270cc/Part2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script>
+function get_faces(){
+
+var numberOfFaces = 5;
+var theLeftSide =
+    document.getElementById("leftSide");
+//alert('Face');
+var random_position = Math.floor((Math.random() * 100) + 1);
+//alert (random_position);
+for (var i=0; i<numberOfFaces;i++){
+show_faces();
+
+}
+	//alert( 'hi');
+	
+	function show_faces(){
+	
+var new_random_position = Math.floor((Math.random() * 250) + 1);
+var new_random_position_top = Math.floor((Math.random() * 250) + 1);
+
+var smilyFace=document.createElement("img");
+smilyFace.src = 'http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png';
+smilyFace.style.left = new_random_position;
+smilyFace.style.top = new_random_position_top;
+document.getElementById("leftSide").appendChild(smilyFace);
+//alert (new_random_position);
+
+}
+numberOfFaces+=1;}
+</script>
+<style>
+img{ position:absolute;
+}
+div {position:absolute;
+     width:500px;
+     height:500px}
+
+#rightSide { left: 500px; 
+            border-left: 1px solid black }
+</style>
+			</head>
+<body id="theBody" onload="get_faces()">
+
+
+<h1>Matching Game</h1>
+<p>Click on the extra smiling face on the left </p>
+<div id="leftSide"><img src="./Part2_files/smile.png" style="left: 190px; top: 112px;"><img src="./Part2_files/smile.png" style="left: 140px; top: 19px;"><img src="./Part2_files/smile.png" style="left: 180px; top: 223px;"><img src="./Part2_files/smile.png" style="left: 206px; top: 236px;"><img src="./Part2_files/smile.png" style="left: 87px; top: 158px;"></div> 
+
+<div id="rightSide"></div> 
+</body></html>

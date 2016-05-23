@@ -1,0 +1,90 @@
+
+<!-- saved from url=(0120)https://s3.amazonaws.com/coursera-uploads/peer-review/LgWwihnoEeWDtQoum3sFeQ/ae42413d0638c27e44d626c6e27620d1/Part4.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script>
+
+
+
+
+function get_faces(){
+
+var numberOfFaces = 5;
+var theLeftSide =
+    document.getElementById("leftSide");
+//alert('Face');
+var random_position = Math.floor((Math.random() * 100) + 1);
+//alert (random_position);
+
+for (var i=0; i<numberOfFaces;i++){
+show_faces();
+}
+right_face();
+	//alert( 'hi');
+
+	theLeftSide.lastChild.onclick=
+    function nextLevel(event){
+	event.stopPropagation();
+	numberOfFaces += 5;
+    get_faces();
+	
+	theBody.onclick = 
+	function gameOver() {
+    alert("Game Over!");
+    theBody.onclick = null;
+    theLeftSide.lastChild.onclick = null;
+}; };
+
+	function show_faces(){
+var theBody =
+ document.getElementsByTagName("body")[0];		
+var new_random_position = Math.floor((Math.random() * 300) + 1);
+var new_random_position_top = Math.floor((Math.random() * 300) + 1);
+var smilyFace=document.createElement("img");
+
+
+smilyFace.src = 'http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png';
+smilyFace.style.left = new_random_position;
+smilyFace.style.top = new_random_position_top;
+document.getElementById("leftSide").appendChild(smilyFace);
+//alert (new_random_position);
+}
+
+function right_face(){
+//alert("right face")
+
+var theRightSide =
+    document.getElementById("rightSide");
+	//alert("Working");
+var newLeftSide =
+    document.getElementById("leftSide")
+var Right_smilyFace = newLeftSide.cloneNode(true);	
+var item = Right_smilyFace.lastElementChild;
+    Right_smilyFace.removeChild(item);
+
+document.getElementById("rightSide").appendChild(Right_smilyFace);
+//alert("right_face working")
+numberOfFaces+=1;
+}
+
+numberOfFaces+=1;}
+</script>
+<style>
+img{ position:absolute;
+}
+div {position:absolute;
+     width:500px;
+     height:500px}
+
+#rightSide { left: 500px; 
+            border-left: 1px solid black }
+</style>
+			</head>
+<body id="theBody" onload="get_faces()">
+
+
+<h1>Matching Game</h1>
+<p>Click on the extra smiling face on the left </p>
+<div id="leftSide"><img src="./Part4_files/smile.png" style="left: 253px; top: 120px;"><img src="./Part4_files/smile.png" style="left: 17px; top: 122px;"><img src="./Part4_files/smile.png" style="left: 36px; top: 98px;"><img src="./Part4_files/smile.png" style="left: 84px; top: 45px;"><img src="./Part4_files/smile.png" style="left: 240px; top: 52px;"></div> 
+
+<div id="rightSide"><div id="leftSide"><img src="./Part4_files/smile.png" style="left: 253px; top: 120px;"><img src="./Part4_files/smile.png" style="left: 17px; top: 122px;"><img src="./Part4_files/smile.png" style="left: 36px; top: 98px;"><img src="./Part4_files/smile.png" style="left: 84px; top: 45px;"></div></div> 
+</body></html>

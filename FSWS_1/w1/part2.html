@@ -1,0 +1,123 @@
+
+<!-- saved from url=(0120)https://s3.amazonaws.com/coursera-uploads/peer-review/LgWwihnoEeWDtQoum3sFeQ/93268e2a07ab1b38388087c026c21ea3/part2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<style>
+
+fieldset{background:lightyellow;
+		border:10px solid yellow;
+		padding:10px;
+		margin-bottom:10px;
+		width:720px;	
+        }
+
+label  {width:180px;
+		text:inline-block; 
+		text-align:right;
+		text-align: top;	
+		}
+		
+.bxContact
+		{width:auto
+		}
+		
+.radioButton
+        { width:auto;
+		}
+		
+.txtAddress{ width: 360px; height: 50px
+        }		
+
+p {  text-align:center;
+
+}
+
+		
+
+
+
+</style>
+
+
+
+</head>
+<body>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
+<h3> Please enter your details for our dating web site</h3>
+<div style="Position:relative: top:-10px; left:10px">
+<fieldset>
+	<legend> Your Face </legend>
+	<label for="avatar">Your image:</label>
+	<input type="file" name="avatar" id="avatar" accept="image/gif, image/jpeg, image/png" required="">
+	<img src="./part2_files/avatar" id="preview" type="file">
+</fieldset>
+
+<fieldset>
+	<legend>Your General Details </legend>
+	
+	<label for="Name"> Name:</label>
+        <input type="text" name="Name" placeholder="Enter name" required=""> <br> <!-- <textarea name = "Name">  Please enter your name here  </textarea> <br> --> 
+	
+	<label for="Gender" class="radioButton">Gender: </label>
+		<input type="radio" name="gender" value="Male" required="">Male 
+		<input type="radio" name="gender" value="Female" required="">Female<br>
+	
+	<label for="Age">Age: </label>
+		<input type="number" name="Age" value="18" required=""><br>
+	
+	<label for="DOB">Date of Birth:: </label>
+		<input type="date" name="DOB"><br>
+
+	<label for="Favorite Color"> Favorite Color: </label>   
+		<input type="color" name="FavoriteColor"><br>
+	
+	<label for="Country"> Which country: </label>
+	    <select name="Countries">
+		
+	            <option value="">  </option>
+				<option value="Mexico">Mexico</option>
+				<option value="US">US </option>
+				<option value="UK">UK</option>
+				<option value="France">France</option>
+				<option value="Other">China</option>
+				
+		</select>
+</fieldset>
+
+
+<fieldset>
+	<legend>Your Indicators </legend>
+	
+<p> 	<label for="Height"> Height: </label>
+		Short <input type="range" min="0" max="100" step="5" value="50" class="rangeSlide"> Tall  </p>
+		
+<p>		
+	<label for="Salary"> Salary:</label>
+	Poor <input type="range" min="0" max="100" step="5" value="50" class="rangeSlide"> Rich </p>
+</fieldset>
+
+
+<fieldset>
+	<legend>Your Contact Information </legend>
+	
+	<label for="Email">Email:</label>
+		<input type="email" name="email"><br>
+		
+	<label for="tel"> Mobile </label>	
+		<input type="tel" name="tel"><br>
+	
+    <label for="Address"> Addres: </label>	
+		<input type="Text" name="Address" class="txtAddress"><br>
+	
+	<label for="Contact" class="bxContact"> Method to contact you</label>
+		<input type="checkbox" name="Contact" value="E-mail">E-mail
+		<input type="checkbox" name="Contact" value="Whatsapp">Whatsapp
+		<input type="checkbox" name="Contact" value="in app chat"> in app chat<br>
+	
+</fieldset>
+<input type="submit" value="Send">
+</div>
+</form>
+<script src="./part2_files/dating_web_site.js"></script>
+
+</body></html>

@@ -1,0 +1,89 @@
+
+<!-- saved from url=(0120)https://s3.amazonaws.com/coursera-uploads/peer-review/LgWwihnoEeWDtQoum3sFeQ/d63f8afc388ad1fb15d829450c2f3603/Part1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Guessing color game</title>
+		<script>
+		
+var target;
+var guess_input_text;
+var guess_input;
+var guessed =0;
+var finished = false;
+var colors = new Array(6);
+
+function do_game() {
+
+  var  target1 = Math.random()*5;
+  /*  alert(target1); print target 1 to verify the number*/
+
+    var target2 = Math.floor(target1);
+  /*  alert(target2) print target two to verify the number; */
+
+
+
+    while (!finished) {
+    guess_input = prompt("I am thinking of one of this colors: " 
+                          + "Amber, Blue, Cyan, Grey, Orange, Purple      " 
+                          + "what color Im I thinking of ?");
+    guessed += 1;
+			
+    colors[0]= 'Amber';
+    colors[1]= 'Blue';
+    colors[2]= 'Cyan';
+    colors[3]= 'Grey';
+    colors[4]= 'Orange';
+    colors[5]= 'Purple';
+	
+					
+    target_color = colors[target2];
+  /*  alert(target_color); test what color you got*/
+
+    finished = check_guess();
+
+    function check_guess(){
+	
+                 
+                if(guess_input != target_color){
+				if (guess_input != colors[0]){
+				
+				if (guess_input != colors[1]){
+				
+				if(guess_input != colors[2]){
+				
+				if(guess_input != colors[3]){
+				
+				if(guess_input != colors[4]){
+				
+				if(guess_input != colors[5]){
+				
+					alert('I dont recognize your color');
+				 return false;
+				} } } }	}	}
+				 
+               
+				}
+                if (guess_input == target_color ){
+				
+                    alert('Your guess is correct');
+                  
+                    return true
+                }
+				
+            
+        } 
+    }
+
+}
+					
+
+
+		</script>
+
+	</head>
+
+
+<body =="" onload="do_game()">
+
+
+
+
+</body></html>
